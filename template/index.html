@@ -44,7 +44,9 @@
                             <a class="nav-link" href="/template/registro.html">Registro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/template/login.html">Login</a>
+                            <a class="nav-carrito" href="/template/login.html">
+                                <img src="/assets/img/avatar.png" alt="LoginLogo" width="30" height="30">
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-carrito" href="/template/carrito.html">
@@ -57,8 +59,130 @@
         </nav>
     </div>
 
+    <div class="container-fluid">
+        <div class="row" style="background-color: black; color: white; font-size: 16px; padding: 8px;">
+            <div class="col text-center">
+                DESPACHO GRATIS EN COMPRAS SOBRE LOS $35.000
+            </div>
+        </div>
+        
+    </div>
+    <!-- Sección Libros Destacados -->
+    <div class="container-fluid" style="margin-top: 20px;">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="line">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="title-recomendados" style="text-align: center;">Libros Destacados</div>
+            </div>
+            <div class="col">
+                <div class="line">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contenedor">
+        <a href=""></a>
+        <div class="card" style="padding: 15px 5px 5px 5px;">
+            <a onclick="verDetalles(1)">
+                <div class="box-1">
+                    <img src="/assets/img/harry-potter2.webp" alt="harry-potter2">
+                </div>
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">Harry Potter And The Chamber Of Secrets</h3>
+                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">ROWLING, JOANNE K.</h5>
+                <p class="card-price">$19.990</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="card" style="padding: 15px 5px 5px 5px;" onclick="verDetalles(2)">
+            <div class="box-1">
+                <img src="/assets/img/Si-te-gusta-la-oscuridad.webp" alt="jenga">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Si Te Gusta La Oscuridad</h3>
+                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">KING, STEPHEN</h5>
+                <p class="card-price">$21.600</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="card" style="padding: 15px 5px 5px 5px;">
+            <div class="box-1">
+                <img src="/assets/img/el-niño-que-perdio-la-guerra.webp" alt="jenga">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">El Niño Que Perdio La Guerra</h3>
+                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">NAVARRO, JULIA</h5>
+                <p class="card-price">$24.990</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Botón Ver Más -->
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center" style="height: 100%;">
+                <div class="col-auto">
+                    <div class="btn-ver-mas">
+                        Más información
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- Sección Promociones -->
+    <div class="title-recomendados">Promociones</div>
+    <div class="contenedor">
+        <div class="card">
+            <div class="box-1">
+                <img src="/assets/img/jumanji.jpg" alt="jumanji">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Jumanji</h3>
+                <p class="card-price">$19.990</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box-1">
+                <img src="/assets/img/jenga.jpg" alt="jenga">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Jenga</h3>
+                <p class="card-price">$12.990</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box-1">
+                <img src="/assets/img/uno.webp" alt="jenga">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">UNO</h3>
+                <p class="card-price">$8.990</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Sección Categorías Destacadas -->
+    <div class="container-fluid">
+        <div class="contenedor-promocion">
+            <img src="/assets/img/el-niño-que-perdio-la-guerra.webp" alt="jenga">
+        </div>
+    </div>
+    
+
+
+    <footer class="footer">Todos los derechos reservados</footer>
+
 
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/detalle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

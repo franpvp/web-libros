@@ -1,0 +1,14 @@
+{
+    "1": {
+        "titulo": "Harry Potter And The Chamber Of Secrets",
+        "autor": "ROWLING, JOANNE K.",
+        "precio": "$19.990",
+        "imagen": "/assets/img/harry-potter2.webp"
+    },
+    "2": {
+        "titulo": "Si Te Gusta La Oscuridad",
+        "autor": "KING, STEPHEN",
+        "precio": "$21.600",
+        "imagen": "/assets/img/Si-te-gusta-la-oscuridad.webp"
+    }
+}
