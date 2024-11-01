@@ -2,7 +2,7 @@
     "1": {
         "titulo": "Harry Potter And The Chamber Of Secrets",
         "autor": "ROWLING, JOANNE K.",
-        "editorial": "", 
+        "editorial": "Scholastic", 
         "precio": "$19.990",
         "resena": "The Dursleys were so mean and hideous that summer that all Harry Potter wanted was to get back to the Hogwarts School for Witchcraft and Wizardry. But just as he's packing his bags, Harry receives a warning from a strange, impish creature named Dobby who says that if Harry Potter returns to Hogwarts, disaster will strike.And strike it does. For in Harry's second year at Hogwarts, fresh torments and horrors arise, including an outrageously stuck-up new professor, Gilderoy Lockhart, a spirit named Moaning Myrtle who haunts the girls' bathroom, and the unwanted attentions of Ron Weasley's younger sister, Ginny.",
         "especificaciones": {
@@ -124,7 +124,7 @@
             "formato": "Tapa Blanda",
             "paginas": 160
         },
-        "stock": 15,
+        "stock": 4,
         "imagen": "/assets/img/Un-Buen-Dia-Para-Estar-Sola.webp"
     },
     "9": {
@@ -140,40 +140,40 @@
             "formato": "Tapa Blanda",
             "paginas": 188
         },
-        "stock": 20,
+        "stock": 12,
         "imagen": "/assets/img/Deten-El-Estres.webp"
     },
     "10": {
-        "titulo": "",
-        "autor": "SILVA, JAIME",
-        "editorial": "Diana", 
+        "titulo": "Metodos Numericos Aplicados A La Ingenieria. Problemas En Polymath Y M",
+        "autor": "CARRASCO, LUIS",
+        "editorial": "Imp. Macro Peru Macro Peru", 
         "precio": "$15.990",
-        "resena": "¡Domina tu estrés antes de que te domine a ti! Descubre cómo con el Dr. Jaime Silva. “Este libro quiere impulsar a las personas –y a la sociedad– a mirarse a sí mismas y que, al hacerlo, comprendan su lugar en el entramado que constituyen los pilares del bienestar psicológico”. Escribir un libro sobre bienestar puede ser una aventura riesgosa, dice el autor en las primeras páginas de Detén el estrés. Sin embargo, transitamos una época inédita en la historia de la humanidad en la que la salud mental se ha vuelto protagonista de la agenda social, dando cuenta de la urgente necesidad de la población por obtener herramientas para enfrentar la epidemia de estrés. Jaime Silva, psicólogo y doctor en Psicobiología, se sumerge en dicha aventura y propone conocer el concepto de homeostasis social –el equilibrio entre el sentido de seguridad de un ser humano y su sentido de libertad– como determinante del bienestar. Para alcanzarlo, se concentra en cuatro pilares fundamentales: la relevancia de conectar con otros, la importancia de ser conscientes del aquí y el ahora, tener un propósito de vida y, finalmente, conocer y entender nuestras emociones. Haciendo referencia a casos clínicos, ejemplos prácticos y una serie de estudios mundiales, Detén el estrés no es un libro de recomendaciones paso a paso, ni tampoco una letanía de prescripciones de cómo se debe vivir la vida. Al contrario, se constituye como una herramienta complementaria a una terapia o como apoyo al desarrollo emocional del lector, estimulándolo a hacerse sus propias preguntas y acompañándolo a comprender que el bienestar psicológico no es equivalente a una vida sin dificultades, traumas, estrés o sufrimiento.",
+        "resena": "Este libro es una herramienta académica idónea para resolver diversos problemas de ingeniería, donde previamente se plantean modelos matemáticos que describen el comportamiento de un fenómeno físico. Estos modelos resultan muchas veces ser muy complejos, por ello el libro le ayudará a resolver modelos matemáticos de alta dificultad para así encontrar una solución aproximada. Mediante el uso de los métodos numéricos y la ayuda de un software simple como el Ploymath el lector desarrollará proyectos de relativa complejidad, tal como se ilustra en los problemas de aplicaciones presentados en este texto.",
         "especificaciones": {
-            "categoria": "Autoayuda",
-            "sub-categoria": "Autoayuda",
+            "categoria": "Informatica",
+            "sub-categoria": "Lenguajes De Programacion",
             "idioma": "Español",
             "formato": "Tapa Blanda",
-            "paginas": 188
+            "paginas": 592
         },
-        "stock": 20,
-        "imagen": "/assets/img/Deten-El-Estres.webp"
+        "stock": 9,
+        "imagen": "/assets/img/Metodos Numericos Aplicados A La Ingenieria. Problemas En Polymath Y M.webp"
     },
     "11": {
-        "titulo": "",
-        "autor": "SILVA, JAIME",
-        "editorial": "Diana", 
-        "precio": "$15.990",
-        "resena": "¡Domina tu estrés antes de que te domine a ti! Descubre cómo con el Dr. Jaime Silva. “Este libro quiere impulsar a las personas –y a la sociedad– a mirarse a sí mismas y que, al hacerlo, comprendan su lugar en el entramado que constituyen los pilares del bienestar psicológico”. Escribir un libro sobre bienestar puede ser una aventura riesgosa, dice el autor en las primeras páginas de Detén el estrés. Sin embargo, transitamos una época inédita en la historia de la humanidad en la que la salud mental se ha vuelto protagonista de la agenda social, dando cuenta de la urgente necesidad de la población por obtener herramientas para enfrentar la epidemia de estrés. Jaime Silva, psicólogo y doctor en Psicobiología, se sumerge en dicha aventura y propone conocer el concepto de homeostasis social –el equilibrio entre el sentido de seguridad de un ser humano y su sentido de libertad– como determinante del bienestar. Para alcanzarlo, se concentra en cuatro pilares fundamentales: la relevancia de conectar con otros, la importancia de ser conscientes del aquí y el ahora, tener un propósito de vida y, finalmente, conocer y entender nuestras emociones. Haciendo referencia a casos clínicos, ejemplos prácticos y una serie de estudios mundiales, Detén el estrés no es un libro de recomendaciones paso a paso, ni tampoco una letanía de prescripciones de cómo se debe vivir la vida. Al contrario, se constituye como una herramienta complementaria a una terapia o como apoyo al desarrollo emocional del lector, estimulándolo a hacerse sus propias preguntas y acompañándolo a comprender que el bienestar psicológico no es equivalente a una vida sin dificultades, traumas, estrés o sufrimiento.",
+        "titulo": "Administracion Hardware De Un Sistema Informatico",
+        "autor": "RAMOS PEREZ, ARTURO FRANCISCO",
+        "editorial": "Imp. Macro Peru Macro Peru", 
+        "precio": "$24.990",
+        "resena": "Los contenidos incluidos en este libro abarcan desde conceptos básicos, como la arquitectura Von Neumann de computadoras, los componentes de un sistema informático, etc., hasta conceptos muy utilizados y más avanzados en el ámbito empresarial actual, como el balanceo de carga, la alta disponibilidad y los sistemas en clúster, que harán que el lector encuentre el libro sumamente interesante.",
         "especificaciones": {
-            "categoria": "Autoayuda",
-            "sub-categoria": "Autoayuda",
+            "categoria": "Informatica",
+            "sub-categoria": "Hardware",
             "idioma": "Español",
             "formato": "Tapa Blanda",
-            "paginas": 188
+            "paginas": 208
         },
-        "stock": 20,
-        "imagen": "/assets/img/Deten-El-Estres.webp"
+        "stock": 7,
+        "imagen": "/assets/img/Administracion-hardware-de-un-sistema-informatico.webp"
     },
     "12": {
         "titulo": "Sistemas Operativos",
@@ -188,8 +188,8 @@
             "formato": "Tapa Blanda",
             "paginas": 544
         },
-        "stock": 20,
-        "imagen": "/assets/img/Deten-El-Estres.webp"
+        "stock": 13,
+        "imagen": "/assets/img/Sistemas-operativos.webp"
     },
     "13": {
         "titulo": "Todo Sobre Los NFT",
@@ -204,7 +204,87 @@
             "formato": "Tapa Blanda",
             "paginas": 196
         },
-        "stock": 20,
+        "stock": 25,
         "imagen": "/assets/img/Todo-Sobre-Los-NFT.webp"
+    },
+    "14": {
+        "titulo": "Vinland Saga Nº 27",
+        "autor": "YUKIMURA, MAKOTO",
+        "editorial": "Planeta Comic", 
+        "precio": "$15.990",
+        "resena": "Las aventuras de unos pioneros vikingos.Desde su llegada a Vinland, la tierra de todas sus esperanzas, los pioneros han descifrado grandes areas forestales para crear vastos campos de trigo. Aunque sus primeros contactos con los nativos, el pueblo Lnu, fueron cordiales y bajo el signo de la curiosidad mutua, algunos nordicos, liderados por Ivar y Ugge, siguen convencidos de que deben prepararse para la guerra. Esta creencia es compartida por el chaman de la tribu Gitpi, traumatizado por su vision profetica de la destruccion de su pueblo y del continente americano por parte de los colonos. ¿Conseguira Thorfinn perseguir su sueño pacifista contra gente que solo piensa en la guerra?",
+        "especificaciones": {
+            "categoria": "Comics y Manga",
+            "sub-categoria": "Manga",
+            "idioma": "Español",
+            "formato": "Tapa Blanda",
+            "paginas": 200
+        },
+        "stock": 4,
+        "imagen": "/assets/img/Vinland Saga Nº 27.webp"
+    },
+    "15": {
+        "titulo": "Attack On Titan #21",
+        "autor": "ISAYAMA, HAJIME",
+        "editorial": "Ovni Press", 
+        "precio": "$12.990",
+        "resena": "Durante el último siglo, lo que quedaba de la humanidad se vio obligada a refugiarse en una ciudad enorme y escondida, protegida por tres inmensos muros debido al temor hacia los extraños y gigantescos Titanes. Poco se sabe acerca de sus orígenes, pero la repentina aparición de un enorme Titán está a punto de cambiarlo todo...",
+        "especificaciones": {
+            "categoria": "Comics y Manga",
+            "sub-categoria": "Comics Chilenos",
+            "idioma": "Español",
+            "formato": "Tapa Blanda",
+            "paginas": 200
+        },
+        "stock": 8,
+        "imagen": "/assets/img/Attack On Titan #21.webp"
+    },
+    "16": {
+        "titulo": "Star Wars Darth Vader Tomo Nº 03/04",
+        "autor": "LARROCA, SALVADOR",
+        "editorial": "Planeta Comic", 
+        "precio": "$15.990",
+        "resena": "El penúltimo recopilatorio de la serie del Lord Sith más temido en la galaxia. Hay una revolución en Shu-Torun y el Imperio no piensa permitirlo. Cuando a Darth Vader le encargan que lidere un asalto militar contra el planeta, ¿puede ser que su ascenso a la gloria haya empezado? ¿Pero quién seguirá a Vader a la guerra? ¿Tú lo harías? Claro que siempre es mejor pelear junto a Vader que contra él. Esa es una lección que muchos están a punto de aprender.",
+        "especificaciones": {
+            "categoria": "Comics y Manga",
+            "sub-categoria": "Comics en Español",
+            "idioma": "Español",
+            "formato": "Tapa Blanda",
+            "paginas": 136
+        },
+        "stock": 15,
+        "imagen": "/assets/img/Star Wars Darth Vader Tomo Nº 03:04.webp"
+    },
+    "17": {
+        "titulo": "Spy X Family #10",
+        "autor": "ENDO, TETSUYA",
+        "editorial": "Ivrea", 
+        "precio": "$10.990",
+        "resena": "Libro de historietas de estilo manga y de género shonen (orientado al público juvenil) encuadernado en rústica de 200 páginas interiores en blanco y negro más cubiertas con sobrecubierta con solapas, sentido de lectura oriental. Los países de Westalis y Ostania libran desde hace años una guerra fría donde el espionaje y los asesinatos son moneda corriente. El inigualable espía conocido como Twilight es el mejor agente de Westalis que tiene por objetivo encargarse del poderoso Donovan Desmond. El problema es que Desmond es un ermitaño antisocial cuyas únicas apariciones públicas son en los actos escolares de su hijo. Twilight deberá acercarse al objetivo lo suficiente como para desbaratar su agenda secreta. Para ello, sólo deberá simular que es un hombre de familia... con el pequeño detalle de que sólo tiene 7 días para conseguir la familia ideal. Es por eso que bajo la identidad del psiquiatra Loid Forger, Twilight reclutará a Yor Briar, una civil ostaniana que quiere tener bajo perfil y Anya, una huerfanita que sólo busca una familia cariñosa, para hacer las partes de esposa e hija respectivamente. Pero resulta que este par tampoco es nada normal, especialmente si tenemos en cuenta que Yor es una asesina profesional buscada por ambos bandos y Anya es una prófuga de un laboratorio secreto donde consiguió poderes telepáticos.",
+        "especificaciones": {
+            "categoria": "Comics y Manga",
+            "sub-categoria": "Manga",
+            "idioma": "Español",
+            "formato": "Tapa Blanda",
+            "paginas": 200
+        },
+        "stock": 14,
+        "imagen": "/assets/img/Spy X Family #10.webp"
+    },
+    "18": {
+        "titulo": "Guardianes De La Noche #8",
+        "autor": "GOTOUGE, KOYOHARU",
+        "editorial": "Norma Editorial", 
+        "precio": "$10.990",
+        "resena": "Libro de historietas de estilo manga y de género shonen (orientado al público juvenil) encuadernado en rústica de 192 páginas interiores en blanco y negro más cubiertas con sobrecubierta y sentido de lectura oriental. UN SER MISTERIOSO AMENAZA CON DESTRUIR AL EQUIPO MATADEMONIOS... Tanjirô ejecuta la forma 'cielo inmaculado' de la danza sagrada del dios del fuego para pararle los pies a Enmu, el demonio del sueño. ¡¿Habrá surtido efecto su estrategia?! Por otro lado, un misterioso ser se presenta ante el equipo de Matademonios y obliga al pilar de las llamas Kyôjurô Rengoku a entrar en acción...",
+        "especificaciones": {
+            "categoria": "Comics y Manga",
+            "sub-categoria": "Manga",
+            "idioma": "Español",
+            "formato": "Tapa Blanda",
+            "paginas": 192
+        },
+        "stock": 6,
+        "imagen": "/assets/img/Guardianes De La Noche #8.webp"
     }
 }

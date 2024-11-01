@@ -61,8 +61,106 @@
         </nav>
     </div>
 
+    <!-- Sección Libros Autoayuda -->
+    <div class="container-fluid" style="margin-top: 20px;">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="line">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="title-recomendados" style="text-align: center;">Libros Autoayuda</div>
+            </div>
+            <div class="col">
+                <div class="line">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libros -->
+    <div class="contenedor">
+        <div class="card" style="padding: 15px 5px 5px 5px;">
+            <a onclick="verDetalles(5)" style="cursor: pointer;">
+                <div class="box-1">
+                    <img src="/assets/img/Si-Lo-Crees-Lo-Creas.webp" alt="Si-Lo-Crees-Lo-Creas">
+                </div>
+            </a>
+            <div class="card-content">
+                <h3 class="card-title"></h3>
+                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">TRACY, BRIAN</h5>
+                <p class="card-price">$14.990</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="card" style="padding: 15px 5px 5px 5px;">
+            <a onclick="verDetalles(6)" style="cursor: pointer;">
+                <div class="box-1">
+                    <img src="/assets/img/Alas-De-Hierro.webp" alt="Alas-De-Hierro">
+                </div>
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">Alas De Hierro</h3>
+                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">YARROS, REBECCA</h5>
+                <p class="card-price">$26.990</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="card" style="padding: 15px 5px 5px 5px;">
+            <a onclick="verDetalles(9)" style="cursor: pointer;">
+                <div class="box-1">
+                    <img src="/assets/img/el-niño-que-perdio-la-guerra.webp" alt="el-niño-que-perdio-la-guerra">
+                </div>
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">El Niño Que Perdio La Guerra</h3>
+                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">NAVARRO, JULIA</h5>
+                <p class="card-price">$24.990</p>
+                <button class="add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Botón Ver Más -->
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center" style="height: 100%;">
+                <div class="col-auto">
+                    <a href="/template/categorias/autoayuda.html" style="text-decoration: none;">
+                        <div class="btn-ver-mas">
+                            Más información
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paginación -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    
+    <footer class="footer">Todos los derechos reservados</footer>
+
 
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/detalle.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

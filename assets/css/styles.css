@@ -177,7 +177,6 @@ ul li:hover ul.dropdown {
     color: white;
     text-align: center;
     padding: 15px;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
@@ -248,7 +247,7 @@ ul li:hover ul.dropdown {
 }
 
 .contenedor-promocion{
-    position: absolute;
+    position: relative;
     width: 300px;
     height: 400px;
     border-radius: 16px;
