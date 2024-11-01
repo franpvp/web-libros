@@ -1,25 +1,35 @@
 {
     "usuarios": [
-        {
+        {   
+            "rol": "admin",
             "username": "fr.valdiviap",
             "contrasena": "Prueba123",
             "nombres": "Francisca Patricia",
             "apellidos": "Valdivia Palma",
-            "correo": "fr.valdiviap@gmail.com"
+            "correo": "fr.valdiviap@gmail.com",
+            "fecha_nacimiento": "30/03/1998",
+            "domicilio": ""
+
         },
         {
+            "rol": "cliente",
             "username": "jperez",
             "contrasena": "Contraseña456",
             "nombres": "Juan",
             "apellidos": "Pérez González",
-            "correo": "jperez@example.com"
+            "correo": "jperez@example.com",
+            "fecha_nacimiento": "12/11/1980",
+            "domicilio": ""
         },
         {
+            "rol": "cliente",
             "username": "mgarcia",
             "contrasena": "Pass789",
             "nombres": "María",
             "apellidos": "García López",
-            "correo": "mgarcia@example.com"
+            "correo": "mgarcia@example.com",
+            "fecha_nacimiento": "23/06/1993",
+            "domicilio": ""
         }
     ]
 }

@@ -147,7 +147,6 @@ function validarContrasenasIguales() {
     }
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const carritoBtn = document.querySelector(".nav-carrito");
     const dropdownContent = document.querySelector(".dropdown-content");
