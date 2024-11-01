@@ -146,3 +146,19 @@ function validarContrasenasIguales() {
         input.classList.add("is-invalid");
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const carritoBtn = document.querySelector(".nav-carrito");
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    carritoBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        dropdownContent.classList.toggle("show");
+    });
+
+    // Cierra el dropdown al hacer clic fuera
+    document.addEventListener("click", () => {
+        dropdownContent.classList.remove("show");
+    });
+});

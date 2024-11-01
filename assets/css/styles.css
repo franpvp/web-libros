@@ -77,13 +77,15 @@ ul li ul.dropdown {
 }
 
 .dropdown-item:hover {
-    background-color: #f8f9fa; /* Color de fondo en hover */
-    color: #000 !important; /* Color del texto en hover */
+    background-color: #f8f9fa;
+    color: white !important;
+    border-radius: 10px;
+
 }
 .dropdown-item:focus,
 .dropdown-item:active {
-    background-color: #f8f9fa !important; /* Mismo color de fondo en focus y active */
-    color: #000 !important; /* Mismo color de texto en focus y active */
+    background-color: #f8f9fa !important;
+    color: #000 !important;
 }
 
 ul li a:hover {
@@ -265,6 +267,61 @@ ul li:hover ul.dropdown {
     border: rgb(15, 137, 143) 1px solid;
     border-radius: 16px;
     cursor: pointer;
+}
+
+/* Estilos generales del carrito y dropdown */
+.nav-item.dropdown-carrito {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    right: 0;
+    background-color: white;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1;
+}
+
+.carrito-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carrito-items li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.carrito-total {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-ver-carrito {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: #0f898f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Mostrar dropdown al hacer hover */
+.nav-item.dropdown-carrito:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content.show {
+    display: block;
 }
 
 .btn-ver-mas:hover{

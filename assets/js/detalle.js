@@ -10,8 +10,8 @@ fetch('/template/libros.json')
     .then(data => {
         const libroId = getQueryParam('id');
         const libro = data[libroId];
-
         if (libro) {
+            document.getElementById('libro-seleccionado').textContent = libro.titulo;
             document.getElementById('detalle-titulo').textContent = libro.titulo;
             document.getElementById('detalle-autor').textContent = libro.autor;
             document.getElementById('detalle-precio').textContent = libro.precio;

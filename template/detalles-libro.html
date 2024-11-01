@@ -24,12 +24,14 @@
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Libros
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/template/categorias/clasicos.html">Clásicos</a></li>
                                 <li><a class="dropdown-item" href="/template/categorias/comics-mangas.html">Comics y Mangas</a></li>
                                 <li><a class="dropdown-item" href="/template/categorias/juvenil.html">Juvenil</a></li>
+                                <br>
                                 <li><a class="dropdown-item" href="/template/categorias/literatura.html">Literatura</a></li>
                                 <li><a class="dropdown-item" href="/template/categorias/informatica.html">Computación e Informática</a></li>
+                                <li><a class="dropdown-item" href="/template/categorias/autoayuda.html">Autoayuda</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -58,13 +60,38 @@
             </div>
         </nav>
     </div>
-
-    <div id="detalle-libro">
-        <img id="detalle-imagen" src="" alt="Imagen del libro">
-        <h3 id="detalle-titulo"></h3>
-        <h5 id="detalle-autor"></h5>
-        <p id="detalle-precio"></p>
+    <!-- Navegación -->
+    <div class="container-fluid" style="padding: 25px 15px 15px 50px;">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/template/index.html">Inicio</a></li>
+                        <li id="libro-seleccionado" class="breadcrumb-item active" aria-current="page"></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
     </div>
+    
+
+    <!-- Detalle de libro seleccionado -->
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-auto">
+                <div id="detalle-libro">
+                    <img id="detalle-imagen" src="" alt="Imagen del libro">
+                </div>
+            </div>
+            <div class="col-2">
+                <h3 id="detalle-titulo"></h3>
+                <h5 id="detalle-autor"></h5>
+                <p id="detalle-precio"></p>
+            </div>
+        </div>
+    </div>
+    
 
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/detalle.js"></script>

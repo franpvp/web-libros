@@ -1,0 +1,25 @@
+{
+    "usuarios": [
+        {
+            "username": "fr.valdiviap",
+            "contrasena": "Prueba123",
+            "nombres": "Francisca Patricia",
+            "apellidos": "Valdivia Palma",
+            "correo": "fr.valdiviap@gmail.com"
+        },
+        {
+            "username": "jperez",
+            "contrasena": "Contraseña456",
+            "nombres": "Juan",
+            "apellidos": "Pérez González",
+            "correo": "jperez@example.com"
+        },
+        {
+            "username": "mgarcia",
+            "contrasena": "Pass789",
+            "nombres": "María",
+            "apellidos": "García López",
+            "correo": "mgarcia@example.com"
+        }
+    ]
+}
