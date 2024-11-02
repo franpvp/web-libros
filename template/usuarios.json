@@ -7,7 +7,7 @@
             "nombres": "Francisca Patricia",
             "apellidos": "Valdivia Palma",
             "correo": "fr.valdiviap@gmail.com",
-            "fecha_nacimiento": "30/03/1998",
+            "fecha_nacimiento": "1998-03-30",
             "domicilio": ""
 
         },
@@ -18,7 +18,7 @@
             "nombres": "Juan",
             "apellidos": "Pérez González",
             "correo": "jperez@example.com",
-            "fecha_nacimiento": "12/11/1980",
+            "fecha_nacimiento": "1980-11-12",
             "domicilio": ""
         },
         {
@@ -28,7 +28,7 @@
             "nombres": "María",
             "apellidos": "García López",
             "correo": "mgarcia@example.com",
-            "fecha_nacimiento": "23/06/1993",
+            "fecha_nacimiento": "1993-05-12",
             "domicilio": ""
         }
     ]
