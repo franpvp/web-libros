@@ -1,7 +1,7 @@
 // Función para cargar los detalles del usuario desde usuarios.json
 function verificarCredenciales(username, password) {
     // Cargar el archivo JSON de usuarios
-    return fetch('/template/usuarios.json') // Cambia '/path/to/' por la ruta correcta a tu archivo
+    return fetch('/template/data/usuarios.json') // Cambia '/path/to/' por la ruta correcta a tu archivo
         .then(response => response.json())
         .then(data => {
             // Buscar el usuario en el JSON

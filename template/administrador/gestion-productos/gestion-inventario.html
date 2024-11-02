@@ -91,7 +91,7 @@
     <script src="/assets/js/index.js"></script>
     <script>
         // Cargar y mostrar los productos en la tabla
-        fetch('/template/libros.json')
+        fetch('/template/data/libros.json')
             .then(response => response.json())
             .then(data => {
                 const libros = data.libros;

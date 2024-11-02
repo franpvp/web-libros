@@ -5,7 +5,7 @@ function getQueryParam(param) {
 }
 
 // Cargar los detalles del libro seleccionado
-fetch('/template/libros.json')
+fetch('/template/data/libros.json')
     .then(response => response.json())
     .then(data => {
         const libroId = parseInt(getQueryParam('id'), 10); // Convierte el ID a número
@@ -13,6 +13,9 @@ fetch('/template/libros.json')
 
         if (libro) {
             document.getElementById('libro-seleccionado').textContent = libro.titulo;
+            document.getElementById('categoria-libro').textContent = libro.especificaciones.categoria;
+            // Añadir el enlace dinámico a la categoría
+            document.getElementById('categoria-libro').href = `/template/categorias.html?categoria=${encodeURIComponent(libro.especificaciones.categoria)}`;
             document.getElementById('detalle-titulo').textContent = libro.titulo;
             document.getElementById('detalle-autor').textContent = libro.autor;
             document.getElementById('detalle-precio').textContent = libro.precio;

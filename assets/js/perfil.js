@@ -1,7 +1,7 @@
 const nombres = document.getElementById('nombres-usuario');
 const apellidos = document.getElementById('apellidos-usuario');
 
-fetch('/template/usuarios.json')
+fetch('/template/data/usuarios.json')
     .then(response => response.json())
     .then(data => {
         const usernameBuscado = "jperez";

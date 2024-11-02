@@ -92,7 +92,7 @@
     <script>
         // Función para cargar usuarios desde el archivo JSON y guardarlos en localStorage
         function cargarUsuarios() {
-            fetch('/template/usuarios.json')
+            fetch('/template/data/usuarios.json')
                 .then(response => response.json())
                 .then(data => {
                     const usuarios = data.usuarios;
