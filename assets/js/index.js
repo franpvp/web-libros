@@ -160,6 +160,7 @@ function limpiarCarrito() {
     
     // Eliminar el carrito del localStorage
     localStorage.removeItem('carrito');
+    localStorage.removeItem('carritoTotal');
     
     // Actualizar el carrito en la vista
     actualizarCarrito();
