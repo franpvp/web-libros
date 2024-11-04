@@ -25,9 +25,8 @@
                                 Libros
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/template/categorias/clasicos.html">Clásicos</a></li>
+                                <li><a class="dropdown-item" href="/template/categorias/novelas.html">Novelas</a></li>
                                 <li><a class="dropdown-item" href="/template/categorias/comics-mangas.html">Comics y Mangas</a></li>
-                                <li><a class="dropdown-item" href="/template/categorias/juvenil.html">Juvenil</a></li>
                                 <br>
                                 <li><a class="dropdown-item" href="/template/categorias/literatura.html">Literatura</a></li>
                                 <li><a class="dropdown-item" href="/template/categorias/informatica.html">Computación e Informática</a></li>
@@ -50,10 +49,21 @@
                                 <img src="/assets/img/avatar.png" alt="LoginLogo" width="30" height="30">
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-carrito" href="/template/carrito.html">
+                        <li class="nav-item dropdown-carrito">
+                            <a class="nav-carrito" style="cursor: pointer;">
                                 <img src="/assets/img/carro-de-la-compra.png" alt="Carrito" width="30" height="30">
                             </a>
+                            <div class="dropdown-content">
+                                <ul class="carrito-items">
+                                    <li>Artículo 1 - $12.000</li>
+                                    <li>Artículo 2 - $15.000</li>
+                                    
+                                </ul>
+                                <div class="carrito-total">
+                                    <strong>Total:</strong> $27.000
+                                </div>
+                                <button class="btn-ver-carrito" onclick="location.href='/template/carrito.html'">Ver Carrito</button>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -67,7 +77,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/template/index.html">Inicio</a></li>
-                        <li class="breadcrumb-item"><a id="categoria-libro" href="#"></a></li>
+                        <li class="breadcrumb-item"><a id="categoria-libro"></a></li>
                         <li id="libro-seleccionado" class="breadcrumb-item active" aria-current="page"></li>
                     </ol>
                 </nav>

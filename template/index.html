@@ -27,9 +27,8 @@
                                         Libros
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="/template/categorias/clasicos.html">Clásicos</a></li>
+                                        <li><a class="dropdown-item" href="/template/categorias/novelas.html">Novelas</a></li>
                                         <li><a class="dropdown-item" href="/template/categorias/comics-mangas.html">Comics y Mangas</a></li>
-                                        <li><a class="dropdown-item" href="/template/categorias/juvenil.html">Juvenil</a></li>
                                         <br>
                                         <li><a class="dropdown-item" href="/template/categorias/literatura.html">Literatura</a></li>
                                         <li><a class="dropdown-item" href="/template/categorias/informatica.html">Computación e Informática</a></li>
@@ -67,7 +66,7 @@
                                 <div class="carrito-total">
                                     <strong>Total:</strong> $27.000
                                 </div>
-                                <button class="btn-ver-carrito">Ver Carrito</button>
+                                <button class="btn-ver-carrito" onclick="location.href='/template/carrito.html'">Ver Carrito</button>
                             </div>
                         </li>
                     </ul>
@@ -84,15 +83,28 @@
         </div>
         
     </div>
+    <!-- Buscador Libros -->
+    <div class="container-fluid" style="padding: 20px; margin-top: 10px;">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <input class="form-control p-2" list="datalistOptions" id="exampleDataList" placeholder="Ingrese búsqueda">
+                <datalist id="datalistOptions">
+                <option value="San Francisco">
+                <option value="New York">
+                </datalist>
+            </div>
+        </div>
+    </div>
+
     <!-- Sección Libros Destacados -->
-    <div class="container-fluid" style="margin-top: 20px;">
+    <div class="container-fluid" style="margin-top: 10px;">
         <div class="row align-items-center">
             <div class="col">
                 <div class="line">
                 </div>
             </div>
             <div class="col-auto">
-                <div class="title-recomendados" style="text-align: center;">Libros Destacados</div>
+                <div class="title-recomendados" style="text-align: center; font-size: 40px;">Libros Destacados</div>
             </div>
             <div class="col">
                 <div class="line">
@@ -156,7 +168,14 @@
         </div>
     </div>
     <!-- Sección Promociones -->
-    <div class="title-recomendados">Promociones</div>
+    <div class="title-recomendados" style="font-size: 40px;">Promociones</div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <img src="/assets/img/promo.png" alt="promo" class="img-fluid" style="border-radius: 16px;">
+            </div>
+        </div>
+    </div>
     <div class="contenedor">
         <div class="card">
             <div class="box-1">
@@ -164,7 +183,8 @@
             </div>
             <div class="card-content">
                 <h3 class="card-title">Jumanji</h3>
-                <p class="card-price">$19.990</p>
+                <p class="card-price" style="color: red;"><s>$19.990</s></p>
+                <p class="card-price">$12.990</p>
                 <button class="add-to-cart-btn">Agregar al Carrito</button>
             </div>
         </div>
@@ -174,7 +194,8 @@
             </div>
             <div class="card-content">
                 <h3 class="card-title">Jenga</h3>
-                <p class="card-price">$12.990</p>
+                <p class="card-price" style="color: red;"><s>$12.990</s></p>
+                <p class="card-price">$10.990</p>
                 <button class="add-to-cart-btn">Agregar al Carrito</button>
             </div>
         </div>
@@ -184,7 +205,8 @@
             </div>
             <div class="card-content">
                 <h3 class="card-title">UNO</h3>
-                <p class="card-price">$8.990</p>
+                <p class="card-price" style="color: red;"><s>$8.990</s></p>
+                <p class="card-price">$7.990</p>
                 <button class="add-to-cart-btn">Agregar al Carrito</button>
             </div>
         </div>
@@ -210,17 +232,22 @@
         <div class="row justify-content-center">
             <div class="col-auto">
                 <div class="contenedor-promocion">
-                    <img src="" alt="jenga">
+                    <img src="/assets/img/logo-comics-mangas.png" alt="comics-mangas" class="img-fluid imagen-promocion">
                 </div>
             </div>
             <div class="col-auto">
                 <div class="contenedor-promocion">
-                    <img src="" alt="jenga">
+                    <img src="/assets/img/Novelas.png" alt="novelas" class="img-fluid imagen-promocion">
                 </div>
             </div>
             <div class="col-auto">
                 <div class="contenedor-promocion">
-                    <img src="" alt="jenga">
+                    <img src="/assets/img/Autoayuda.png" alt="autoayuda" class="img-fluid imagen-promocion">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="contenedor-promocion">
+                    <img src="/assets/img/Literatura.png" alt="literatura" class="img-fluid imagen-promocion">
                 </div>
             </div>
         </div>

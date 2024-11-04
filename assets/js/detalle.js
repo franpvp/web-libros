@@ -15,7 +15,7 @@ fetch('/template/data/libros.json')
             document.getElementById('libro-seleccionado').textContent = libro.titulo;
             document.getElementById('categoria-libro').textContent = libro.especificaciones.categoria;
             // Añadir el enlace dinámico a la categoría
-            document.getElementById('categoria-libro').href = `/template/categorias.html?categoria=${encodeURIComponent(libro.especificaciones.categoria)}`;
+            document.getElementById('categoria-libro').href = libro.link_categoria;
             document.getElementById('detalle-titulo').textContent = libro.titulo;
             document.getElementById('detalle-autor').textContent = libro.autor;
             document.getElementById('detalle-precio').textContent = libro.precio;

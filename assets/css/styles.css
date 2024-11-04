@@ -247,12 +247,21 @@ ul li:hover ul.dropdown {
 }
 
 .contenedor-promocion{
-    position: relative;
-    width: 500px;
-    height: 400px;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
     border-radius: 16px;
     background-color: #D9D9D9;
     margin: 20px;
+}
+
+.imagen-promocion {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    border: #D9D9D9 1px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-ver-mas{
@@ -327,6 +336,52 @@ ul li:hover ul.dropdown {
     background-color: rgb(15, 137, 143);
     transition: 0.5s ease-in-out;
     color: white;
+}
+
+.contenedor-carrito{
+    width: 300px;
+    height: auto;
+    border-radius: 16px;
+    border: #D9D9D9 1px solid;
+    padding: 20px;
+}
+
+.contenedor-pago-exitoso{
+    width: 300px;
+    height: auto;
+    border-radius: 16px;
+    border: #D9D9D9 1px solid;
+    padding: 20px;
+}
+
+.tarjeta{
+    width: 400px;
+    height: 250px;
+    background: #0f898f;
+    border-radius: 16px;
+    
+}
+
+.titulo-tarjeta{
+    color: white;
+    font-size: 20px;
+    padding: 0px 10px 10px 30px;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.digitos-tarjeta{
+    margin-left: 30px;
+    color: white;
+}
+
+.contenedor-detalle-compra{
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 500px;
+    height: 400px;
+    border-radius: 16px;
+    border: #D9D9D9 1px solid;
 }
 
 @media (min-width: 1200px) {
