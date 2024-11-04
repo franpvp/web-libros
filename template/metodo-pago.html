@@ -34,9 +34,6 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/template/about.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/template/contacto.html">Contacto</a>
                         </li>
                     </ul>
@@ -44,25 +41,30 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/template/registro.html">Registro</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-carrito" href="/template/login.html">
+                        <li class="nav-item dropdown">
+                            <a class="nav-carrito" id="avatarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/assets/img/avatar.png" alt="LoginLogo" width="30" height="30">
                             </a>
+                            <ul class="dropdown-menu dropdown-menu-end text-center" style="color: white;" aria-labelledby="avatarDropdown">
+                                <li><a class="dropdown-item" style="font-size: 15px; color: black !important;" href="/template/login.html">Iniciar sesión</a></li>
+                                <li><a class="dropdown-item" style="font-size: 15px; color: black !important;" href="/template/perfil.html">Mi Perfil</a></li>
+                                <li><a class="dropdown-item" style="font-size: 15px; color: black !important; background-color: red;" href="/template/index.html" onclick="cerrarSesion()">Cerrar sesión</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown-carrito">
                             <a class="nav-carrito" style="cursor: pointer;">
                                 <img src="/assets/img/carro-de-la-compra.png" alt="Carrito" width="30" height="30">
                             </a>
                             <div class="dropdown-content">
-                                <ul class="carrito-items">
-                                    <li>Artículo 1 - $12.000</li>
-                                    <li>Artículo 2 - $15.000</li>
-                                    
-                                </ul>
-                                <div class="carrito-total">
-                                    <strong>Total:</strong> $27.000
+                                <div class="carrito-items">
+                                    <!-- Aquí se agregarán los productos -->
                                 </div>
-                                <button class="btn-ver-carrito" onclick="location.href='/template/carrito.html'">Ver Carrito</button>
+                                <div class="carrito-total text-center mt-4">
+                                    <strong></strong>
+                                </div>
+                                
+                                <button class="btn-limpiar-carrito" onclick="limpiarCarrito()">Limpiar Carrito</button>
+                                <button class="btn-ver-carrito" onclick="location.href='/template/metodo-pago.html'">Ir a Pagar</button>
                             </div>
                         </li>
                     </ul>
@@ -109,42 +111,60 @@
                 </div>
                 
             </div>
+
+        </div>
+        <form class="formulario-registro">
+            <div class="row g-2 justify-content-center">
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="nombres" placeholder="name@example.com" oninput="validarNombres()" required>
+                        <label for="floatingInputGrid">Nombre Titular</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="input-digitos" placeholder="1234 5678 9012 3456" 
+                            maxlength="19" required>
+                        <label for="input-digitos">Dígitos Tarjeta</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                        <label for="expiration-date" class="form-label">Fecha de Vencimiento</label>
+                        <input type="text" id="expiration-date" name="expiration-date" class="form-control" placeholder="MM/AA" maxlength="5" oninput="formatExpirationDate(this)" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">CVC</label>
+                    <input type="text" id="cvc" name="cvc" class="form-control" maxlength="3" minlength="3" pattern="\d{3}" title="Por favor, ingrese solo números de 3 dígitos." required>
+                </div>
+            </div>
+
+            <!-- Detalle de la compra -->
+            <div class="container-fluid">
+                <div class="contenedor-detalle-compra">
+                    <h1 class="text-center" style="font-size: 25px; margin-top: 20px; margin-bottom: 20px;">Detalle Carrito</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <div class="detalle-items">
+                            </div>
+                            <div id="carrito-total" class="carrito-total text-center mt-4" style="font-size: 25px;">
+                                <strong></strong> <!-- Aquí se mostrará el total del carrito -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
             
-        </div>
-        <div class="row g-2 justify-content-center">
-            <div class="col-md-4">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
-                    <label for="floatingInputGrid">Nombre Titular</label>
+            <!-- Boton Efectuar Pago -->
+            <div class="container-fluid">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-auto">
+                        <button type="submit" id="submit-btn" class="add-to-cart-btn" onclick="location.href='/template/pago-exitoso.html'" style="padding: 16px 50px 16px 50px; font-size: 18px; border-radius: 40px;">Pagar</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
-                    <label for="floatingInputGrid">Dígitos Tarjeta</label>
-                </div>
-            </div>
-            <div class="col-md-4">
-                    <label for="expiration-date" class="form-label">Fecha de Vencimiento</label>
-                    <input type="text" id="expiration-date" name="expiration-date" class="form-control" placeholder="MM/AA" maxlength="5" oninput="formatExpirationDate(this)">
-            </div>
-            <div class="col-md-4">
-                <label class="form-label">CVC</label>
-                <input type="password" id="cvc" name="cvc" class="form-control" maxlength="3" minlength="3">
-            </div>
-        </div>
-        <!-- Detalle de la compra -->
-        <div class="contenedor-detalle-compra">
-            <div style="font-size: 20px; text-align: center; margin-top: 20px; font-weight: 700;">Detalle compra</div>
-        </div>
-        <!-- Boton Efectuar Pago -->
-        <div class="container-fluid">
-            <div class="row justify-content-center mb-4">
-                <div class="col-auto">
-                    <button class="add-to-cart-btn" style="padding: 16px 50px 16px 50px; font-size: 18px; border-radius: 40px;">Confirmar</button>
-                </div>
-            </div>
-        </div>
+        </form>
+        
     </div>
     
 
@@ -153,16 +173,63 @@
     <footer class="footer">Todos los derechos reservados</footer>
 
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/detalle.js"></script>
+    <script src="/assets/js/registro.js"></script>
     <script>
         function formatExpirationDate(input) {
         // Eliminar cualquier carácter que no sea número o "/"
-        input.value = input.value.replace(/[^0-9\/]/g, '');
+            input.value = input.value.replace(/[^0-9\/]/g, '');
 
-        // Insertar automáticamente una barra después de ingresar el mes
-        if (input.value.length === 2 && !input.value.includes('/')) {
-            input.value = input.value + '/';
+            // Insertar automáticamente una barra después de ingresar el mes
+            if (input.value.length === 2 && !input.value.includes('/')) {
+                input.value = input.value + '/';
+            }
+        
         }
-}
+        // Validar CVC
+        document.getElementById('cvc').addEventListener('input', function (e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        // Función para actualizar el contenido del carrito
+        function actualizarCarrito() {
+            const carritoItemsContainer = document.querySelector('.carrito-items');
+            const detalleItemsContainer = document.querySelector('.detalle-items');
+            const totalElement = document.getElementById('carrito-total').querySelector('strong');
+
+            // Calcular el total
+            const total = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
+
+            // Limpiar el contenido actual de carrito-items
+            carritoItemsContainer.innerHTML = ''; 
+            detalleItemsContainer.innerHTML = ''; 
+
+            // Mostrar cada producto en el carrito
+            productosEnCarrito.forEach(producto => {
+                const itemHTML = `
+                    <li style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 10px;">
+                        <div><img src="${producto.imagen}" alt="${producto.titulo}" width="50" height="50" style="margin-right: 10px;"></div>
+                        <div>${producto.titulo}</div>
+                        <div>$${producto.precio.toLocaleString()} (Cantidad: ${producto.cantidad})</div>
+                    </li>`;
+                carritoItemsContainer.insertAdjacentHTML('beforeend', itemHTML);
+                detalleItemsContainer.insertAdjacentHTML('beforeend', itemHTML);
+            });
+
+            // Actualizar el total en el HTML
+            totalElement.textContent = `Total: $${total.toLocaleString()}`;
+
+            // Guardar el total en localStorage para acceder desde otras partes de la aplicación
+            localStorage.setItem('carritoTotal', total);
+        }
+
+        // Inicializar el carrito al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cargar el carrito desde localStorage
+            productosEnCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            actualizarCarrito();
+        });
+    
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

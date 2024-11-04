@@ -23,7 +23,7 @@
                         <li class="nav-item dropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Libros
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="navbarDropdown">
@@ -38,9 +38,6 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/template/about.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/template/contacto.html">Contacto</a>
                         </li>
                     </ul>
@@ -48,25 +45,30 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/template/registro.html">Registro</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-carrito" href="/template/login.html">
+                        <li class="nav-item dropdown">
+                            <a class="nav-carrito" id="avatarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/assets/img/avatar.png" alt="LoginLogo" width="30" height="30">
                             </a>
+                            <ul class="dropdown-menu dropdown-menu-end text-center" style="color: white;" aria-labelledby="avatarDropdown">
+                                <li><a class="dropdown-item" style="font-size: 15px;  color: black !important; border-radius: 16px; padding: 12px 30px 12px 30px;" href="/template/login.html">Iniciar sesión</a></li>
+                                <li><a class="dropdown-item perfil" style="font-size: 15px; border-radius: 16px; padding: 12px 30px 12px 30px;" href="/template/perfil.html">Mi Perfil</a></li>
+                                <li><a class="dropdown-item cerrar-sesion" style="font-size: 15px; border-radius: 16px; padding: 12px 16px 12px 16px;" href="/template/index.html" onclick="cerrarSesion()">Cerrar sesión</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown-carrito">
                             <a class="nav-carrito" style="cursor: pointer;">
                                 <img src="/assets/img/carro-de-la-compra.png" alt="Carrito" width="30" height="30">
                             </a>
                             <div class="dropdown-content">
-                                <ul class="carrito-items">
-                                    <li>Artículo 1 - $12.000</li>
-                                    <li>Artículo 2 - $15.000</li>
-                                    
-                                </ul>
-                                <div class="carrito-total">
-                                    <strong>Total:</strong> $27.000
+                                <div class="carrito-items">
+                                    <!-- Aquí se agregarán los productos -->
                                 </div>
-                                <button class="btn-ver-carrito" onclick="location.href='/template/carrito.html'">Ver Carrito</button>
+                                <div class="carrito-total text-center mt-4">
+                                    <strong></strong>
+                                </div>
+                                
+                                <button class="btn-limpiar-carrito" onclick="limpiarCarrito()">Limpiar Carrito</button>
+                                <button class="btn-ver-carrito" onclick="location.href='/template/metodo-pago.html'">Ir a Pagar</button>
                             </div>
                         </li>
                     </ul>
@@ -114,57 +116,8 @@
     </div>
     <!-- Libros -->
     <div class="contenedor">
-        <div class="card" style="padding: 15px 5px 5px 5px;">
-            <a onclick="verDetalles(1)" style="cursor: pointer;">
-                <div class="box-1">
-                    <img src="/assets/img/harry-potter2.webp" alt="harry-potter2">
-                </div>
-            </a>
-            <div class="card-content">
-                <h3 class="card-title">Harry Potter And The Chamber Of Secrets</h3>
-                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">ROWLING, JOANNE K.</h5>
-                <p class="card-price">$19.990</p>
-                <button class="add-to-cart-btn">Agregar al Carrito</button>
-            </div>
-        </div>
-        <div class="card" style="padding: 15px 5px 5px 5px;">
-            <a onclick="verDetalles(2)" style="cursor: pointer;">
-                <div class="box-1">
-                    <img src="/assets/img/Alas-De-Hierro.webp" alt="Alas-De-Hierro">
-                </div>
-            </a>
-            <div class="card-content">
-                <h3 class="card-title">Alas De Hierro</h3>
-                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">YARROS, REBECCA</h5>
-                <p class="card-price">$26.990</p>
-                <button class="add-to-cart-btn">Agregar al Carrito</button>
-            </div>
-        </div>
-        <div class="card" style="padding: 15px 5px 5px 5px;">
-            <a onclick="verDetalles(3)" style="cursor: pointer;">
-                <div class="box-1">
-                    <img src="/assets/img/el-niño-que-perdio-la-guerra.webp" alt="el-niño-que-perdio-la-guerra">
-                </div>
-            </a>
-            <div class="card-content">
-                <h3 class="card-title">El Niño Que Perdio La Guerra</h3>
-                <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">NAVARRO, JULIA</h5>
-                <p class="card-price">$24.990</p>
-                <button class="add-to-cart-btn">Agregar al Carrito</button>
-            </div>
-        </div>
-        <!-- Botón Ver Más -->
-        <div class="container-fluid">
-            <div class="row justify-content-center align-items-center" style="height: 100%;">
-                <div class="col-auto">
-                    <a href="/template/categorias/destacados.html" style="text-decoration: none;">
-                        <div class="btn-ver-mas">
-                            Más información
-                        </div>
-                    </a>
-                    
-                </div>
-            </div>
+        <div id="contenedor-productos">
+            <!-- Aquí se mostrarán los productos desde el JSON libro-->
         </div>
     </div>
     <!-- Sección Promociones -->
@@ -179,7 +132,7 @@
     <div class="contenedor">
         <div class="card">
             <div class="box-1">
-                <img src="/assets/img/jumanji.jpg" alt="jumanji">
+                <img alt="jumanji">
             </div>
             <div class="card-content">
                 <h3 class="card-title">Jumanji</h3>
@@ -190,7 +143,7 @@
         </div>
         <div class="card">
             <div class="box-1">
-                <img src="/assets/img/jenga.jpg" alt="jenga">
+                <img alt="jenga">
             </div>
             <div class="card-content">
                 <h3 class="card-title">Jenga</h3>
@@ -201,7 +154,7 @@
         </div>
         <div class="card">
             <div class="box-1">
-                <img src="/assets/img/uno.webp" alt="jenga">
+                <img alt="jenga">
             </div>
             <div class="card-content">
                 <h3 class="card-title">UNO</h3>
@@ -231,24 +184,32 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-auto">
-                <div class="contenedor-promocion">
-                    <img src="/assets/img/logo-comics-mangas.png" alt="comics-mangas" class="img-fluid imagen-promocion">
-                </div>
+                <a href="/template/categorias/comics-mangas.html">
+                    <div class="contenedor-promocion">
+                        <img src="/assets/img/logo-comics-mangas.png" alt="comics-mangas" class="img-fluid imagen-promocion">
+                    </div>
+                </a>
             </div>
             <div class="col-auto">
-                <div class="contenedor-promocion">
-                    <img src="/assets/img/Novelas.png" alt="novelas" class="img-fluid imagen-promocion">
-                </div>
+                <a href="/template/categorias/novelas.html">
+                    <div class="contenedor-promocion">
+                        <img src="/assets/img/Novelas.png" alt="novelas" class="img-fluid imagen-promocion">
+                    </div>
+                </a>
             </div>
             <div class="col-auto">
-                <div class="contenedor-promocion">
-                    <img src="/assets/img/Autoayuda.png" alt="autoayuda" class="img-fluid imagen-promocion">
-                </div>
+                <a href="/template/categorias/autoayuda.html">
+                    <div class="contenedor-promocion">
+                        <img src="/assets/img/Autoayuda.png" alt="autoayuda" class="img-fluid imagen-promocion">
+                    </div>
+                </a>
             </div>
             <div class="col-auto">
-                <div class="contenedor-promocion">
-                    <img src="/assets/img/Literatura.png" alt="literatura" class="img-fluid imagen-promocion">
-                </div>
+                <a href="/template/categorias/literatura.html">
+                    <div class="contenedor-promocion">
+                        <img src="/assets/img/Literatura.png" alt="literatura" class="img-fluid imagen-promocion">
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -259,6 +220,67 @@
 
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/detalle.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            cargarProductos();
+        });
+        
+        function cargarProductos() {
+            fetch('/template/data/libros.json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Datos del JSON:', data); // Verifica que el JSON se cargue
+                    renderizarProductos(data.libros);
+                })
+                .catch(error => console.error('Error al cargar el JSON:', error));
+        }
+        
+        function renderizarProductos(productos) {
+            const contenedorProductos = document.getElementById('contenedor-productos');
+            contenedorProductos.innerHTML = '';
+
+            // Limita la cantidad de libros a 3 en este ejemplo
+            const primerosTresLibros = productos.slice(0, 3);
+
+            // Agrupar libros de a tres
+            for (let i = 0; i < primerosTresLibros.length; i += 3) {
+                // Crear un nuevo row para cada grupo de tres productos
+                const row = document.createElement('div');
+                row.classList.add('row', 'justify-content-center');
+
+                // Seleccionar los siguientes tres productos
+                const grupoLibros = primerosTresLibros.slice(i, i + 3);
+
+                grupoLibros.forEach(libro => {
+                    const productoHTML = `
+                        <div class="col-auto">
+                            <div class="card" style="padding: 15px 5px 5px 5px;">
+                                <a onclick="verDetalles(${libro.id})" style="cursor: pointer;">
+                                    <div class="box-1">
+                                        <img src="${libro.imagen}" alt="${libro.titulo}">
+                                    </div>
+                                </a>
+                                <div class="card-content">
+                                    <h3 class="card-title">${libro.titulo}</h3>
+                                    <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">${libro.autor}</h5>
+                                    <p class="card-price">$${libro.precio.toLocaleString()}</p>
+                                    <button class="add-to-cart-btn" 
+                                        data-imagen="${libro.imagen}"
+                                        data-titulo="${libro.titulo}" 
+                                        data-precio="${libro.precio}">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    row.insertAdjacentHTML('beforeend', productoHTML);
+                });
+
+                // Agregar el row completo al contenedor principal
+                contenedorProductos.appendChild(row);
+            }
+        }
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

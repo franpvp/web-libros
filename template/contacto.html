@@ -34,9 +34,6 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/template/about.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/template/contacto.html">Contacto</a>
                         </li>
                     </ul>
@@ -44,25 +41,30 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/template/registro.html">Registro</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-carrito" href="/template/login.html">
+                        <li class="nav-item dropdown">
+                            <a class="nav-carrito" id="avatarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/assets/img/avatar.png" alt="LoginLogo" width="30" height="30">
                             </a>
+                            <ul class="dropdown-menu dropdown-menu-end text-center" style="color: white;" aria-labelledby="avatarDropdown">
+                                <li><a class="dropdown-item" style="font-size: 15px; color: black !important;" href="/template/login.html">Iniciar sesión</a></li>
+                                <li><a class="dropdown-item" style="font-size: 15px; color: black !important;" href="/template/perfil.html">Mi Perfil</a></li>
+                                <li><a class="dropdown-item" style="font-size: 15px; color: black !important;" href="/template/index.html" onclick="cerrarSesion()">Cerrar sesión</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown-carrito">
                             <a class="nav-carrito" style="cursor: pointer;">
                                 <img src="/assets/img/carro-de-la-compra.png" alt="Carrito" width="30" height="30">
                             </a>
                             <div class="dropdown-content">
-                                <ul class="carrito-items">
-                                    <li>Artículo 1 - $12.000</li>
-                                    <li>Artículo 2 - $15.000</li>
-                                    
-                                </ul>
-                                <div class="carrito-total">
-                                    <strong>Total:</strong> $27.000
+                                <div class="carrito-items">
+                                    <!-- Aquí se agregarán los productos -->
                                 </div>
-                                <button class="btn-ver-carrito" onclick="location.href='/template/carrito.html'">Ver Carrito</button>
+                                <div class="carrito-total text-center mt-4">
+                                    <strong></strong>
+                                </div>
+                                
+                                <button class="btn-limpiar-carrito" onclick="limpiarCarrito()">Limpiar Carrito</button>
+                                <button class="btn-ver-carrito" onclick="location.href='/template/metodo-pago.html'">Ir a Pagar</button>
                             </div>
                         </li>
                     </ul>
@@ -81,23 +83,29 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 m-4">
                     <form class="formulario-login">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="nombres" placeholder="Ingrese nombre" oninput="validarNombres()" required>
                             <label for="floatingInput">Nombre</label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                        <div class="invalid-feedback" id="invalid-nombres" style="display: none;">
+                            Por favor, ingrese un nombre válido.
+                        </div>
+                        <div class="form-floating mt-3">
+                            <input type="email" class="form-control" id="correo" placeholder="name@example.com" oninput="validarCorreo()" required>
                             <label for="floatingInput">Correo Electrónico</label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                        <div class="invalid-feedback" id="invalid-correo" style="display: none;">
+                            Por favor, ingrese un correo electrónico válido (ejemplo: usuario@gmail.com)
+                        </div>
+                        <div class="form-floating mt-3">
+                            <input type="text" class="form-control" id="asunto" placeholder="Ingrese asunto" required>
                             <label for="floatingInput">Asunto</label>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <div class="mb-3">
+                                <div class="mt-3">
                                     <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                                    <textarea class="form-control" id="mensaje" rows="3" required></textarea>
                                 </div>
                             </div>
                         </div>

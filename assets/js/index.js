@@ -2,17 +2,6 @@
 document.getElementById('submit-btn').addEventListener('click', function(event) {
     // event.preventDefault();
 
-    const nombres = document.getElementById('nombres').value;
-    const apellidos = document.getElementById('apellidos').value;
-    const username = document.getElementById('username').value;
-    const correo = document.getElementById('correo').value;
-    const fechaNacimiento = document.getElementById('fecha-nacimiento').value;
-    const contrasena1 = document.getElementById('contrasena1').value;
-    const contrasena2 = document.getElementById('contrasena2').value;
-
-
-    const regexContrasena = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,18}$/;
-
 });
 
 // Botón para limpiar formulario
@@ -38,7 +27,7 @@ function validarNombres() {
         feedback.style.display = "block";
     }
 }
-
+// Función validar campo apellidos
 function validarApellidos() {
     const input = document.getElementById("apellidos");
     const mensaje = document.getElementById("invalid-apellidos");
@@ -69,6 +58,7 @@ function validarUsuario() {
     }
 }
 
+// Función validar fecha de nacimiento
 function validarFechaNacimiento() {
     const fechaNacimiento = document.getElementById('fecha-nacimiento');
     const mensaje = document.getElementById("invalid-fecha");
@@ -80,14 +70,14 @@ function validarFechaNacimiento() {
     
     if (edad < 13 || (edad === 13 && diferenciaMeses < 0)) {
         fechaNacimiento.classList.add("is-invalid");
-        mensaje.style.display = "none";
+        mensaje.style.display = "block";
     } else {
         fechaNacimiento.classList.remove("is-invalid");
-        mensaje.style.display = "block";
+        mensaje.style.display = "none";
     }
 
 }
-
+// Función validar correo
 function validarCorreo() {
     const regexCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|cl)$/;
     const correo = document.getElementById('correo').value;
@@ -102,7 +92,7 @@ function validarCorreo() {
         mensaje.style.display = "none";
     }
 }
-
+// Función validar contraseña
 function validarContrasena() {
     const contrasena = document.getElementById('contrasena1').value;
     const input = document.getElementById('contrasena1');
@@ -161,3 +151,16 @@ document.addEventListener("DOMContentLoaded", function() {
         dropdownContent.classList.remove("show");
     });
 });
+
+
+// Función para limpiar el carrito
+function limpiarCarrito() {
+    // Vaciar el array de productos en el carrito
+    productosEnCarrito = [];
+    
+    // Eliminar el carrito del localStorage
+    localStorage.removeItem('carrito');
+    
+    // Actualizar el carrito en la vista
+    actualizarCarrito();
+}

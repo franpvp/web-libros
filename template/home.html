@@ -34,9 +34,6 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/template/about.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/template/contacto.html">Contacto</a>
                         </li>
                     </ul>
@@ -44,25 +41,29 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/template/registro.html">Registro</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-carrito" href="/template/login.html">
+                        <li class="nav-item dropdown">
+                            <a class="nav-carrito" id="avatarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/assets/img/avatar.png" alt="LoginLogo" width="30" height="30">
                             </a>
+                            <ul class="dropdown-menu dropdown-menu-end text-center" style="color: white;" aria-labelledby="avatarDropdown">
+                                <li><a class="dropdown-item" style="font-size: 15px; color: black !important;" href="/template/perfil.html">Mi Perfil</a></li>
+                                <li><a class="dropdown-item" style="font-size: 15px; color: black !important;" href="/template/index.html" onclick="cerrarSesion()">Cerrar sesión</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown-carrito">
                             <a class="nav-carrito" style="cursor: pointer;">
                                 <img src="/assets/img/carro-de-la-compra.png" alt="Carrito" width="30" height="30">
                             </a>
                             <div class="dropdown-content">
-                                <ul class="carrito-items">
-                                    <li>Artículo 1 - $12.000</li>
-                                    <li>Artículo 2 - $15.000</li>
-                                    
-                                </ul>
-                                <div class="carrito-total">
-                                    <strong>Total:</strong> $27.000
+                                <div class="carrito-items">
+                                    <!-- Aquí se agregarán los productos -->
                                 </div>
-                                <button class="btn-ver-carrito" onclick="location.href='/template/carrito.html'">Ver Carrito</button>
+                                <div class="carrito-total text-center mt-4">
+                                    <strong></strong>
+                                </div>
+                                
+                                <button class="btn-limpiar-carrito" onclick="limpiarCarrito()">Limpiar Carrito</button>
+                                <button class="btn-ver-carrito" onclick="location.href='/template/metodo-pago.html'">Ir a Pagar</button>
                             </div>
                         </li>
                     </ul>
