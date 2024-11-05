@@ -220,15 +220,20 @@
             this.value = this.value.replace(/[^0-9]/g, '');
         });
 
+        
+
         // Función para actualizar el contenido del carrito
         function actualizarCarrito() {
             const carritoItemsContainer = document.querySelector('.carrito-items');
             const detalleItemsContainer = document.querySelector('.detalle-items');
             const totalElement = document.getElementById('carrito-total').querySelector('strong');
-
             const costoEnvio = 3990;
-            // Calcular el total
-            const total = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad + costoEnvio, 0);
+
+            // Calcular el total de los productos en el carrito
+            const totalProductos = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
+
+            // Sumar el costo de envío solo una vez 
+            const total = totalProductos + costoEnvio;
 
             // Limpiar el contenido actual de carrito-items
             carritoItemsContainer.innerHTML = ''; 
