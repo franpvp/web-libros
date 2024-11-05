@@ -19,7 +19,8 @@
             "apellidos": "Pérez González",
             "correo": "jperez@example.com",
             "fecha_nacimiento": "1980-11-12",
-            "domicilio": ""
+            "domicilio": "",
+            "puntos": 0
         },
         {
             "rol": "cliente",
@@ -29,7 +30,8 @@
             "apellidos": "García López",
             "correo": "mgarcia@example.com",
             "fecha_nacimiento": "1993-05-12",
-            "domicilio": ""
+            "domicilio": "",
+            "puntos": 0
         }
     ]
 }

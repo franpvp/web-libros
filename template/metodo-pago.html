@@ -99,16 +99,16 @@
                     <div class="tarjeta">
                         <p style="padding: 20px 10px 0px 30px; color: white; margin: 0; font-family: Arial, Helvetica, sans-serif;">Nombre</p>
                         <div class="titulo-tarjeta">
-                            <strong>Nombre Apellido</strong>
+                            <strong>Nombre Titular</strong>
                         </div>
                         <p style="padding: 20px 10px 0px 30px; color: white; margin: 0; font-family: Arial, Helvetica, sans-serif;">Número</p>
                         <div class="digitos-tarjeta" style="font-size: 22px;">
-                            <strong>1111 2222 3333 4444</strong>
+                            <strong>XXXX XXXX XXXX XXXX</strong>
                         </div>
             
                         <p style="padding: 20px 10px 0px 30px; color: white; margin: 0; font-family: Arial, Helvetica, sans-serif;">Vencimiento</p>
                         <div class="digitos-tarjeta">
-                            02/25
+                            <strong id="fecha-vencimiento-tarjeta">MM/YY</strong>
                         </div>
                     </div>
                 </div>
@@ -120,20 +120,20 @@
             <div class="row g-2 justify-content-center">
                 <div class="col-md-4">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="nombres" placeholder="name@example.com" oninput="validarNombres()" required>
+                        <input type="text" class="form-control" id="nombres" placeholder="name@example.com" oninput="actualizarNombre()" required>
                         <label for="floatingInputGrid">Nombre Titular</label>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-floating">
                         <input type="text" class="form-control" id="input-digitos" placeholder="1234 5678 9012 3456" 
-                            maxlength="19" oninput="validarDigitosTarjeta(this)" required>
+                            maxlength="19" oninput="validarYActualizarDigitos(this)" required>
                         <label for="input-digitos">Dígitos Tarjeta</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                         <label for="expiration-date" class="form-label">Fecha de Vencimiento</label>
-                        <input type="text" id="expiration-date" name="expiration-date" class="form-control" placeholder="MM/AA" maxlength="5" oninput="formatExpirationDate(this)" required>
+                        <input type="text" id="expiration-date" name="expiration-date" class="form-control" placeholder="MM/AA" maxlength="5" oninput="formatearYActualizarFecha(this)" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-label">CVC</label>
@@ -202,7 +202,7 @@
             if (input.value.length > 19) {
                 input.value = input.value.slice(0, 19);
             }
-}
+        }
 
         document.getElementById('formularioPago').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevenir el envío por defecto
@@ -274,6 +274,55 @@
             productosEnCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
             actualizarCarrito();
         });
+
+        // Función para actualizar nombre titular en tarjeta
+        function actualizarNombre() {
+            const nombreInput = document.getElementById('nombres').value;
+            const tituloTarjeta = document.querySelector('.titulo-tarjeta strong');
+            
+            // Expresión regular para validar que solo se ingresen letras y espacios
+            const regex = /^[A-Za-z\s]*$/;
+
+            // Validar el nombre ingresado
+            if (regex.test(nombreInput)) {
+                tituloTarjeta.textContent = nombreInput || 'Nombre Titular'; // Actualizar solo si es válido
+            } else {
+                // Si el nombre no es válido, mostrar mensaje de error o restablecer al texto predeterminado
+                tituloTarjeta.textContent = 'Nombre Titular'; // Restablecer al texto predeterminado
+            }
+        }
+
+        function validarYActualizarDigitos(input) {
+            // Remover cualquier caracter que no sea número
+            const digitosInput = input.value.replace(/\D/g, '');
+
+            // Insertar espacios cada cuatro dígitos
+            const digitosFormateados = digitosInput.replace(/(.{4})/g, '$1 ').trim();
+
+            // Limitar a 19 caracteres (16 dígitos + 3 espacios)
+            input.value = digitosFormateados.slice(0, 19);
+
+            // Actualizar el contenido de los dígitos en la tarjeta
+            const digitosTarjeta = document.querySelector('.digitos-tarjeta strong');
+            digitosTarjeta.textContent = input.value || 'XXXX XXXX XXXX XXXX'; // Texto predeterminado si está vacío
+        }
+
+        function formatearYActualizarFecha(input) {
+            // Eliminar cualquier carácter que no sea número o "/"
+            input.value = input.value.replace(/[^0-9\/]/g, '');
+
+            // Insertar automáticamente una barra después de ingresar el mes
+            if (input.value.length === 2 && !input.value.includes('/')) {
+                input.value += '/';
+            }
+
+            // Actualizar la fecha en la tarjeta
+            const fechaVencimientoInput = document.getElementById('expiration-date').value;
+            const fechaVencimientoTarjeta = document.getElementById('fecha-vencimiento-tarjeta');
+            
+            fechaVencimientoTarjeta.textContent = fechaVencimientoInput || 'MM/YY';
+        }
+
     
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
