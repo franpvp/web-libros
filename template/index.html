@@ -183,6 +183,40 @@
         </div>
     </div>
 
+    <!-- Encuesta -->
+    <div id="encuesta-container" class="encuesta-overlay">
+        <div class="encuesta-content">
+            <button id="cerrar-encuesta" class="btn-cerrar">✖</button>
+            <h2 class="text-center my-4">Encuesta de Preferencias de Lectura</h2>
+            <form id="encuesta-form">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="categoria-preferencia" class="form-label">Categoría de Preferencia</label>
+                    <select class="form-select" id="categoria-preferencia" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="novelas">Novelas</option>
+                        <option value="comics-mangas">Comics y Mangas</option>
+                        <option value="literatura">Literatura</option>
+                        <option value="informatica">Computación e Informática</option>
+                        <option value="autoayuda">Autoayuda</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="feedback" class="form-label">Comentarios Adicionales</label>
+                    <textarea class="form-control" id="feedback" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+
 
     <footer class="footer">Todos los derechos reservados</footer>
 
@@ -285,6 +319,63 @@
                 contenedorProductosPromo.appendChild(promoRow);
             }
         }
+
+        // Mostrar Encuesta
+        document.addEventListener('DOMContentLoaded', () => {
+            const encuestaContainer = document.getElementById('encuesta-container');
+            const cerrarEncuestaBtn = document.getElementById('cerrar-encuesta');
+            const maxIntentosEncuesta = 1;
+            let intentosActuales = parseInt(localStorage.getItem('intentosEncuesta')) || 0;
+
+            // Verificar si se debe mostrar la encuesta
+            if (intentosActuales < maxIntentosEncuesta ) {
+                setTimeout(() => {
+                    encuestaContainer.style.display = 'flex';
+                    intentosActuales++;
+                    localStorage.setItem('intentosEncuesta', intentosActuales);
+                }, 3000);
+            } else {
+                encuestaContainer.style.display = 'none';
+            }
+
+            // Cerrar encuesta al hacer clic en el botón de cierre
+            cerrarEncuestaBtn.addEventListener('click', () => {
+                encuestaContainer.style.display = 'none';
+            });
+
+            // Cerrar encuesta al hacer clic fuera del formulario
+            encuestaContainer.addEventListener('click', (event) => {
+                if (event.target === encuestaContainer) {
+                    encuestaContainer.style.display = 'none';
+                }
+            });
+
+            // Manejo del envío del formulario
+            document.getElementById('encuesta-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const categoriaPreferencia = document.getElementById('categoria-preferencia').value;
+                const feedback = document.getElementById('feedback').value;
+
+                const datosEncuesta = {
+                    nombre: nombre,
+                    email: email,
+                    categoriaPreferencia: categoriaPreferencia,
+                    feedback: feedback
+                };
+
+                let encuestas = JSON.parse(localStorage.getItem('encuestas')) || [];
+                encuestas.push(datosEncuesta);
+                localStorage.setItem('encuestas', JSON.stringify(encuestas));
+
+                alert("¡Gracias por tu feedback! Utilizaremos esta información para recomendarte libros.");
+                document.getElementById('encuesta-form').reset();
+                encuestaContainer.style.display = 'none';
+            });
+        });
+    
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
