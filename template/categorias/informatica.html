@@ -11,7 +11,10 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/template/index.html">Todo Libros</a>
+                <a class="navbar-brand d-flex align-items-center" href="/template/index.html">
+                    <img src="/assets/img/logo.png" alt="Logo" style="width: 120px; height: auto; margin-right: 10px;"> <!-- Ajusta el tamaño del logo aquí -->
+                    Todo Libros
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -238,7 +241,10 @@
                                     <h3 class="card-title">${libro.titulo}</h3>
                                     <h5 class="card-title" style="font-size: 14px; color: rgb(15, 137, 143);">${libro.autor}</h5>
                                     <p class="card-price">$${libro.precio.toLocaleString()}</p>
-                                    <button class="add-to-cart-btn">Agregar al Carrito</button>
+                                    <button class="add-to-cart-btn" 
+                                        data-imagen="${libro.imagen}"
+                                        data-titulo="${libro.titulo}" 
+                                        data-precio="${libro.precio}">Agregar al Carrito</button>
                                 </div>
                             </div>
                         </div>

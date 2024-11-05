@@ -165,3 +165,12 @@ function limpiarCarrito() {
     // Actualizar el carrito en la vista
     actualizarCarrito();
 }
+
+// Función para cerrar sesion y eliminar usuario logeado
+function cerrarSesion() {
+    // Eliminar el usuario logueado de localStorage
+    localStorage.removeItem('usuarioLogueado');
+
+    // Opcional: Redirigir a la página de inicio de sesión o página principal
+    window.location.href = "/template/login.html";
+}

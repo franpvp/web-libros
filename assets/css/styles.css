@@ -446,6 +446,15 @@ ul li:hover ul.dropdown {
     opacity: 1; /* Hace que el mensaje se muestre suavemente */
 }
 
+.img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que llene el contenedor */
+}
+
+.text-center {
+    text-align: center;
+}
 
 @media (min-width: 1200px) {
     .contenedor {
