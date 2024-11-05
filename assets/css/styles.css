@@ -413,8 +413,8 @@ ul li:hover ul.dropdown {
 }
 
 .contenedor-detalle-compra{
-    margin-top: 40px !important;
-    margin-bottom: 30px !important;
+    margin-top: 50px !important;
+    margin-bottom: 100px !important;
     width: 500px;
     height: auto;
     border-radius: 16px;

@@ -103,10 +103,9 @@
                             <hr>
                             <div class="detalle-items">
                             </div>
-                            <div class="envio">
+                            <div class="envio" id="envio">
                                 Envio: $3.990
                             </div>
-                            <hr>
                             <div class="forma-pago">
                                 Forma de Pago: Crédito
                             </div>
@@ -133,18 +132,37 @@
         function actualizarCarrito() {
             const carritoItemsContainer = document.querySelector('.carrito-items');
             const detalleItemsContainer = document.querySelector('.detalle-items');
-            const totalCarrito = JSON.parse(localStorage.getItem('carritoTotal')) || 0;
             const totalElement = document.getElementById('total').querySelector('strong');
+            const costoEnvio = 3990;
     
             // Limpiar el contenido actual de carrito-items
             carritoItemsContainer.innerHTML = ''; 
             detalleItemsContainer.innerHTML = ''; 
     
+            // Calcular el total de los productos en el carrito
+            const totalProductos = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
+            
+            // Determinar si se debe cobrar el costo de envío
+            let total;
+            const envioElement = document.getElementById('envio');
+    
+            if (totalProductos > 35000) {
+                total = totalProductos; // No se cobra el costo de envío
+                if (envioElement) {
+                    envioElement.style.display = 'none'; // Ocultar el costo de envío
+                }
+            } else {
+                total = totalProductos + costoEnvio; // Se cobra el costo de envío
+                if (envioElement) {
+                    envioElement.style.display = 'block'; // Mostrar el costo de envío
+                }
+            }
+    
             // Mostrar cada producto en el carrito
             productosEnCarrito.forEach(producto => {
                 const itemHTML = `
                     <li style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 10px;">
-                        <div style="display: flex; justify-content-center">
+                        <div style="display: flex; justify-content: center">
                             <img src="${producto.imagen}" alt="${producto.titulo}" width="50" height="50" style="margin-right: 10px;">
                         </div>
                         <div>${producto.titulo}</div>
@@ -156,12 +174,15 @@
                 detalleItemsContainer.insertAdjacentHTML('beforeend', itemHTML);
             });
             
-            // Actualizar el total en el HTML, si el elemento existe
+            // Actualizar el total en el HTML
             if (totalElement) {
-                totalElement.textContent = `Total: $${totalCarrito.toLocaleString()}`;
+                totalElement.textContent = `Total: $${total.toLocaleString()}`;
             } else {
                 console.warn("El elemento de total no se encontró en el DOM.");
             }
+    
+            // Guardar el total en localStorage para acceder desde otras partes de la aplicación
+            localStorage.setItem('carritoTotal', total);
         }
     
         // Inicializar el carrito al cargar la página

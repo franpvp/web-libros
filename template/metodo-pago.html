@@ -149,7 +149,7 @@
                         <div class="col-auto">
                             <div class="detalle-items">
                             </div>
-                            <div class="envio">
+                            <div class="envio" id="envio">
                                 Envio: $3.990
                             </div>
                             <div id="carrito-total" class="carrito-total text-center mt-4" style="font-size: 25px;">
@@ -229,15 +229,24 @@
             const totalElement = document.getElementById('carrito-total').querySelector('strong');
             const costoEnvio = 3990;
 
-            // Calcular el total de los productos en el carrito
-            const totalProductos = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
-
-            // Sumar el costo de envío solo una vez 
-            const total = totalProductos + costoEnvio;
-
             // Limpiar el contenido actual de carrito-items
             carritoItemsContainer.innerHTML = ''; 
             detalleItemsContainer.innerHTML = ''; 
+
+            // Calcular el total de los productos en el carrito
+            const totalProductos = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
+
+            // Determinar si se debe cobrar el costo de envío
+            let total;
+            const envioElement = document.getElementById('envio');
+
+            if (totalProductos > 35000) {
+                total = totalProductos; // No se cobra el costo de envío
+                envioElement.style.display = 'none'; // Ocultar el costo de envío
+            } else {
+                total = totalProductos + costoEnvio; // Se cobra el costo de envío
+                envioElement.style.display = 'block'; // Mostrar el costo de envío
+            }
 
             // Mostrar cada producto en el carrito
             productosEnCarrito.forEach(producto => {
